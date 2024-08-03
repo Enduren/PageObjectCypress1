@@ -1,13 +1,32 @@
-import PageActions from './pageActions'; // Import the PageActions class
+import PageActions from '../pageActions';
 
-describe('template spec', () => {
-  it('passes', () => {
-    cy.visit("https://www.edureka.co/");
+describe('Login Test', () => {
+  beforeEach(() => {
+    // Load the login credentials from the JSON file
+    cy.fixture('loginCredentials.json').as('loginData');
+  });
 
-    cy.get('.nav > :nth-child(4) > .login_click').click();
-    cy.get('.modal-header', { timeout: 30000 }).contains("Let's Get Started");
+  it('should display an error for invalid login credentials', function() {
+    // Visit the login page (replace with your actual URL)
+    cy.visit('https://www.automationtesting.co.uk/index.html'); 
 
-    PageActions.Login({ username: 'dtennison@example.com', password: 'chanheMe123' });
-    
+    //close cookie window
+    cy.get('.close-cookie-warning > span').click()
+
+    //open menu bar
+    cy.get('.toggle').click()
+
+    //click login tab
+    cy.get(':nth-child(15) > a',{timeout:30000}).click()
+
+
+
+    // Use the PageActions class to perform the login action
+    PageActions.Login({
+      username: this.loginData.username,
+      password: this.loginData.password
+    });
+
+   
   });
 });
