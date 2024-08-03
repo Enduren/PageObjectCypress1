@@ -32,10 +32,22 @@ class PageActions {
 
     }
 
-    static clothe1(){
+    static addHummingBirdTshirt(){
 
         //click humming bird tshirt
         cy.get(':nth-child(2) > .products > :nth-child(1) > .product-miniature > .thumbnail-container > .thumbnail-top > .thumbnail > picture > img').click()
+
+        //select M size
+        cy.get('#group_1').select('M')
+
+        //click black
+        cy.get('#group_2 > :nth-child(2) > label').click()
+
+        //add to cart
+        cy.get('.add > .btn').click()
+
+        //click Proceed to checkout
+        cy.get('.cart-content-btn > .btn-primary').click()
     }
   
     

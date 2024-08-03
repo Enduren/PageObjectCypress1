@@ -7,6 +7,6 @@ describe('Test store workflow', () => {
         
         PageActions.testStore();
 
-        PageActions.clothe1();
+        PageActions.addHummingBirdTshirt();
     });
 });
