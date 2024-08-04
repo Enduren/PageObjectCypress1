@@ -49,6 +49,40 @@ class PageActions {
         //click Proceed to checkout
         cy.get('.cart-content-btn > .btn-primary').click()
     }
+
+    static addHummingBirdSweater(){
+
+        //click humming bird Sweater
+        cy.get(':nth-child(2) > .products > :nth-child(2) > .product-miniature > .thumbnail-container > .thumbnail-top > .thumbnail > picture > img').click()
+
+        //select 2 qty
+        cy.get('#quantity_wanted').clear().type("2")
+
+        //add to cart
+        cy.get('.add > .btn').click()
+
+        //click Proceed to checkout
+        cy.get('.cart-content-btn > .btn-primary').click()
+    }
+
+    static addTheBestPhoto(){
+
+        //click The best photo
+        cy.get(':nth-child(2) > .products > :nth-child(3) > .product-miniature > .thumbnail-container > .thumbnail-top > .thumbnail > picture > img').click()
+
+        //select 2 qty
+        cy.get('#quantity_wanted').clear().type("2")
+
+        //change size
+        cy.get('#group_3').select('80x120cm')
+        
+        //add to cart
+        cy.get('.add > .btn').click()
+
+        //click Proceed to checkout
+        cy.get('.cart-content-btn > .btn-primary').click()
+    }
+
   
     
   
