@@ -83,8 +83,61 @@ class PageActions {
         cy.get('.cart-content-btn > .btn-primary').click()
     }
 
+    static dataPicker(){
+
+        const todaysDate = Cypress.dayjs().format('YYYY-MM-DD')
+        const nineDaysBack = Cypress.dayjs().subtract(9, 'days').format('YYYY-MM-DD');    
+        const twoDaysBack = Cypress.dayjs().subtract(2, 'days').format('YYYY-MM-DD');
+        const oneDayBack = Cypress.dayjs().subtract(1, 'days').format('YYYY-MM-DD');
+       
+        //close cookie window
+         cy.get('.close-cookie-warning > span').click()
+
+        //open menu bar
+        cy.get('.toggle').click()
+       
+        //click data picker
+        cy.get('#menu > ul > li:nth-child(8) > a').click()
+
+       
+
+       
+    }
+
+    static rangeDate(){
+
+        const todaysDate = Cypress.dayjs().format('YYYY-MM-DD')
+
+        //change range Date
+        cy.get('#rangeDate').type(todaysDate,{force: true})
+
+
+    }
   
-    
+    static basicDateTime(){
+
+        const customFormat =  Cypress.dayjs().format('MMMM DD YYYY hh:mm A');
+
+        //Change Basic Date Time
+        cy.get('#basicDate').type(customFormat,{force: true})
+    }
+
+    static weekDate(){
+        const todaysDate = Cypress.dayjs().format('YYYY-MM-DD')
+
+        //change range Date
+        cy.get('.resetDate > .flatpickr-input').type(todaysDate,{force: true})
+
+       
+
+    }
+
+    static time(){
+
+        const timeFormat =  Cypress.dayjs().format('hh:mm A');
+
+        cy.get('#timePicker').type(timeFormat,{force: true})
+    }
   
   }
   
