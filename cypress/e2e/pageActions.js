@@ -138,6 +138,14 @@ class PageActions {
 
         cy.get('#timePicker').type(timeFormat,{force: true})
     }
+
+    static aboutMe(){
+         //click About Me
+         cy.get(':nth-child(21) > a').click()
+
+         //make sure you are on the page
+         cy.get('.content > h2').contains('Who we are')
+    }
   
   }
   
