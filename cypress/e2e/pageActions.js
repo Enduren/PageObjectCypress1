@@ -1,15 +1,7 @@
 class PageActions {
     static Login({ username, password }) {
         
-     cy.visit('https://www.automationtesting.co.uk/index.html'); 
-
-     cy.wait(2000)
-
-     //close cookie window
-     // cy.get('.close-cookie-warning > span').click()
-
-     //open menu bar
-     cy.get('.toggle').click()
+     
 
      //click login tab
      cy.get(':nth-child(15) > a',{timeout:30000}).click()
@@ -85,21 +77,9 @@ class PageActions {
 
     static dataPicker(){
 
-        const todaysDate = Cypress.dayjs().format('YYYY-MM-DD')
-        const nineDaysBack = Cypress.dayjs().subtract(9, 'days').format('YYYY-MM-DD');    
-        const twoDaysBack = Cypress.dayjs().subtract(2, 'days').format('YYYY-MM-DD');
-        const oneDayBack = Cypress.dayjs().subtract(1, 'days').format('YYYY-MM-DD');
-       
-        //close cookie window
-         cy.get('.close-cookie-warning > span').click()
-
-        //open menu bar
-        cy.get('.toggle').click()
        
         //click data picker
         cy.get('#menu > ul > li:nth-child(8) > a').click()
-
-       
 
        
     }
@@ -139,6 +119,25 @@ class PageActions {
         cy.get('#timePicker').type(timeFormat,{force: true})
     }
 
+    static dropDown(){
+
+        //click data picker
+        cy.get('#menu > ul > li:nth-child(9) > a').click()
+
+        //click radio button one
+        cy.get(':nth-child(3) > label').click()
+
+        //click radio button two
+        cy.get(':nth-child(4) > label').click()
+
+
+        //click radio button three
+        cy.get(':nth-child(5) > label').click()
+
+
+
+    }
+
     static aboutMe(){
          //click About Me
          cy.get(':nth-child(21) > a').click()
@@ -149,11 +148,7 @@ class PageActions {
 
     static fileUpload(){
 
-         //close cookie window
-         cy.get('.close-cookie-warning > span').click()
-
-        //open menu bar
-        cy.get('.toggle').click()
+         
 
         //click upload file tab
         cy.get(':nth-child(10) > a').click()
@@ -165,6 +160,7 @@ class PageActions {
         cy.get('[type="submit"]').click()
 
     }
+
   
   }
   
