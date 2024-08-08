@@ -24,5 +24,9 @@
 const dayjs = require('dayjs')
 
 Cypress.dayjs = dayjs
+
+// cypress/support/commands.js
+
+
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })

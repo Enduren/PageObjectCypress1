@@ -13,6 +13,7 @@
     "dayjs": "^1.11.12"
   },
   "devDependencies": {
+    "cypress-file-upload": "^5.0.8",
     "mocha": "^10.7.0"
   }
 }

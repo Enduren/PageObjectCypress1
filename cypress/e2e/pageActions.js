@@ -146,6 +146,25 @@ class PageActions {
          //make sure you are on the page
          cy.get('.content > h2').contains('Who we are')
     }
+
+    static fileUpload(){
+
+         //close cookie window
+         cy.get('.close-cookie-warning > span').click()
+
+        //open menu bar
+        cy.get('.toggle').click()
+
+        //click upload file tab
+        cy.get(':nth-child(10) > a').click()
+
+        //add a file to upload
+        cy.get('#fileToUpload').attachFile('Random document file.docx')
+
+        //click submit button
+        cy.get('[type="submit"]').click()
+
+    }
   
   }
   
