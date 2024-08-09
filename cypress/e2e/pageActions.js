@@ -119,7 +119,7 @@ class PageActions {
         cy.get('#timePicker').type(timeFormat,{force: true})
     }
 
-    static dropDown(){
+    static radioButton(){
 
         //click data picker
         cy.get('#menu > ul > li:nth-child(9) > a').click()
@@ -138,13 +138,42 @@ class PageActions {
 
     }
 
-    static aboutMe(){
-         //click About Me
-         cy.get(':nth-child(21) > a').click()
-
-         //make sure you are on the page
-         cy.get('.content > h2').contains('Who we are')
+    static checkBox(){
+        cy.get('[for="cb_green"]').click()
+        cy.get('[for="cb_blue"]').click()
+        cy.get('[for="cb_red"]').click()
+        
     }
+
+    static navigationMenu(){
+
+        //Animal drop  down
+        cy.get('#primary_nav_wrap > :nth-child(1) > :nth-child(2) > :nth-child(1)').trigger('mouseover')
+        
+        //click fish
+        cy.get('#primary_nav_wrap > ul > li:nth-child(2) > ul > li:nth-child(3)').click({force: true})
+
+         //verify you clicked Fish
+         cy.get('#outputMessage').contains("You clicked on menu option 'Fish'")
+        
+        //Sport
+        cy.get('#primary_nav_wrap > :nth-child(1) > :nth-child(3) > :nth-child(1)').click()
+
+        //click Tennis
+        cy.get('#primary_nav_wrap > ul > li:nth-child(3) > ul > li:nth-child(2)').click({force: true})
+
+        //verify you clicked Tennis
+        cy.get('#outputMessage').contains("You clicked on menu option 'Tennis'")
+        
+
+
+    }
+
+    static dropDown(){
+        cy.get('#cars').select('Jeep')
+    }
+
+
 
     static fileUpload(){
 
@@ -160,6 +189,15 @@ class PageActions {
         cy.get('[type="submit"]').click()
 
     }
+
+
+    static aboutMe(){
+        //click About Me
+        cy.get(':nth-child(21) > a').click()
+
+        //make sure you are on the page
+        cy.get('.content > h2').contains('Who we are')
+   }
 
   
   }

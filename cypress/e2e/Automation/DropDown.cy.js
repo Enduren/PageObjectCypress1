@@ -19,7 +19,14 @@ describe('Confirm About Me', () => {
 
     it('Confirm About Me', () => {
         
+       PageActions.radioButton();
+
+       PageActions.checkBox();
+
+       PageActions.navigationMenu();
+
        PageActions.dropDown();
        
     });
+
 });
