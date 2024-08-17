@@ -1,4 +1,29 @@
 class PageActions {
+    static ContactUs({firstName,lastName,email,comments}){
+        //click Contact us link
+        cy.get('#menu > ul > li:nth-child(7) > a').click()
+
+        //type first name
+        cy.get('#contact_form > input:nth-child(1)').type(firstName)
+
+        //type last name
+        cy.get('#contact_form > input:nth-child(3)').type(lastName)
+
+
+        //type email
+        cy.get('#contact_form > input:nth-child(5)').type(email)
+
+        //type comments
+        cy.get('#contact_form > textarea').type(comments)
+
+        //type submit
+        cy.get('#form_buttons > input:nth-child(2)').click()
+
+        //verify you submitted the wo
+        cy.get('h3').contains('Thank you for your mail!')
+    }
+    
+    
     static Login({ username, password }) {
         
      
