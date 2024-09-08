@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 
 describe('Cypress Modals', () => {
   it('Open and Assert Modal', () => {
