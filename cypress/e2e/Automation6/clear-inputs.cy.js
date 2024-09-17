@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Cypress Clearing Inputs', () => {
   it('Type and Clear', () => {
