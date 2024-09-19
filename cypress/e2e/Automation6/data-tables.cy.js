@@ -1,4 +1,3 @@
-/// <reference types="Cypress" />
 
 describe('Data Tables', () => {
   it('Validate items inside data table', () => {
