@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Cypress hover', () => {
   it('Lets test hover workaround', () => {

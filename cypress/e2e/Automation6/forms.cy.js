@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Forms, Buttons & Checkbox', () => {
   it('Submit And Assert Form', () => {

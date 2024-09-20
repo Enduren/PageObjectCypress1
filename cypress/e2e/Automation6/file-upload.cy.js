@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Cypress Files Upload', () => {
   it('Should upload JSON example file', () => {

@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('TC_002_Login', () => {
   it('Should login and logout from application', () => {

@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Cypress Files', () => {
   it('Read/Write into JSON file', () => {

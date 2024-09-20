@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Cypress Screenshots', () => {
   it('Full page screenshot', () => {

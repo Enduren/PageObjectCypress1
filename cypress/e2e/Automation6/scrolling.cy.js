@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Scrolling in Cypress', () => {
   it('Scroll into footer view', () => {

@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('TC_001_Smoke_Test', () => {
   it('Should load home page', () => {

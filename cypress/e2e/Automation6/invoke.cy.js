@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Execute javscript code inside cypress', () => {
   it('Invoke calculation of numbers', () => {

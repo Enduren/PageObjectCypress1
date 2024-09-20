@@ -1,4 +1,4 @@
-/// <reference types="Cypress" />
+
 
 describe('Fixtures', () => {
   it('Use fixtures as data provider', () => {
